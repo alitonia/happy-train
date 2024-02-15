@@ -210,6 +210,7 @@ body {
 .train-container {
     position: absolute;
     bottom: -40px;
+    width: 100%;
 }
 
 .train {
@@ -460,10 +461,16 @@ body {
     width: 0.8rem;
     z-index: -1;
 }
+.msg-ctn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    position: absolute;
+}
 
 .message, .additional-info-message {
-    position: absolute;
-    width: 100%;
+    /*width: 80%;*/
     display: flex;
     justify-content: center;
     font-family: "Fredoka", sans-serif;
@@ -473,10 +480,12 @@ body {
 
 .additional-info-message {
     font-size: 1.5rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 35rem;
+
 }
 
 .additional-info-message.hidden {

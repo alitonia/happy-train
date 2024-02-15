@@ -17,7 +17,7 @@ var msg = document.querySelector(".message")
 var moreMsg = document.querySelector(".additional-info-message")
 
 msg.addEventListener(smokeEventName, function (e) {
-    msg.innerHTML = e.detail
+    msg.innerHTML = e.detail.join(' ')
 })
 
 moreMsg.addEventListener(finishEventName, function (e) {
@@ -37,7 +37,7 @@ smoke.addEventListener('animationiteration', function (e) {
         visibleSlots.push(slots.shift())
         currentPhrase = visibleSlots.join(" ")
         var cEvent = new CustomEvent(smokeEventName, {
-            detail: currentPhrase
+            detail: visibleSlots
         })
         msg.dispatchEvent(cEvent)
     } else {
