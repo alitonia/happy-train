@@ -433,7 +433,7 @@ body {
         -o-filter: blur(0.3rem);
         -ms-filter: blur(0.3rem);
         filter: blur(0.3rem);
-        opacity: 0;
+        opacity: 0.3;
         transform: translate(3.5rem, -15rem) scale(6);
     }
 
@@ -461,7 +461,7 @@ body {
     z-index: -1;
 }
 
-.message {
+.message, .additional-info-message {
     position: absolute;
     width: 100%;
     display: flex;
@@ -471,6 +471,25 @@ body {
     font-size: 2.5rem;
 }
 
-.message:empty {
+.additional-info-message {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.additional-info-message.hidden {
+    display: none;
+}
+
+.additional-info-message.hidden-1 .s1,
+.additional-info-message.hidden-2 .s2,
+.additional-info-message.hidden-3 .s3,
+.additional-info-message.hidden-4 .s4 {
+    display: none;
+}
+
+.message:empty, .additional-info-message:empty {
     display: none;
 }
