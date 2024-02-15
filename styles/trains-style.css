@@ -461,7 +461,8 @@ body {
     width: 0.8rem;
     z-index: -1;
 }
-.msg-ctn{
+
+.msg-ctn {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -500,5 +501,9 @@ body {
 }
 
 .message:empty, .additional-info-message:empty {
+    display: none;
+}
+
+.container.hidden {
     display: none;
 }
